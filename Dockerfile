@@ -90,6 +90,8 @@ COPY  . /marathon-lb
 
 WORKDIR /marathon-lb
 
+RUN cp /marathon-lb/certs/* /etc/ssl/certs/
+
 ENTRYPOINT [ "tini", "-g", "--", "/marathon-lb/run" ]
 CMD [ "sse", "--health-check", "--group", "external" ]
 

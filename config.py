@@ -69,14 +69,13 @@ defaults
   retries                   3
   backlog               10000
   maxconn               10000
-  timeout connect          3s
-  timeout client          30s
-  timeout server          30s
+  timeout connect          5s
+  timeout client          60s
+  timeout server        1800s
   timeout tunnel        3600s
   timeout http-keep-alive  1s
-  timeout http-request    15s
+  timeout http-request  1800s
   timeout queue           30s
-  timeout tarpit          60s
 ''' + self.global_default_options() + '''\
 listen stats
   bind 0.0.0.0:9090
