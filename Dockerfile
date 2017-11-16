@@ -43,6 +43,7 @@ RUN set -x \
     && buildDeps=' \
         gcc \
         libcurl4-openssl-dev \
+        libdpkg-perl \
         libffi-dev \
         liblua5.3-dev \
         libpcre3-dev \
@@ -89,10 +90,9 @@ RUN set -x \
     && apt-get purge -y --auto-remove $buildDeps
 
 COPY  . /marathon-lb
+RUN cp /marathon-lb/certs/* /etc/ssl/certs/
 
 WORKDIR /marathon-lb
-
-RUN cp /marathon-lb/certs/* /etc/ssl/certs/
 
 ENTRYPOINT [ "tini", "-g", "--", "/marathon-lb/run" ]
 CMD [ "sse", "--health-check", "--group", "external" ]
