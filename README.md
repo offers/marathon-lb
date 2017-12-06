@@ -4,7 +4,7 @@
 Before building, put your desired SSL certs in the `certs/` folder. They will be copied to `/etc/ssl/certs` in the container. Don't commit SSL certs to this repo.
 
 ## Timeouts
-Timeouts for HAProxy configured in `config.yml` have been increased to support Vulcan Reporting's HTTP request architecture.
+Timeouts for HAProxy configured in `config.yml` have been increased to support long-running HTTP requess.
 
 # marathon-lb [![Build Status](https://jenkins.mesosphere.com/service/jenkins/buildStatus/icon?job=public-marathon-lb-master)](https://jenkins.mesosphere.com/service/jenkins/job/public-marathon-lb-master/)
 
