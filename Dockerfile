@@ -44,7 +44,6 @@ RUN set -x \
         build-essential \
         gcc \
         libcurl4-openssl-dev \
-        libdpkg-perl \
         libffi-dev \
         liblua5.3-dev \
         libpcre3-dev \
