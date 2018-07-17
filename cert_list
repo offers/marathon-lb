@@ -20,3 +20,7 @@
 /etc/ssl/certs/zdtc.co.pem
 /etc/ssl/certs/zdtc.global.pem
 /etc/ssl/certs/mash.to.pem
+/etc/ssl/certs/whattoexpect.com.pem
+/etc/ssl/certs/e2e.ign.com.pem
+/etc/ssl/certs/computershopper.com.pem
+/etc/ssl/certs/www.computershopper.com.pem
